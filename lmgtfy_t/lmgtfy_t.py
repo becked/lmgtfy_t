@@ -34,6 +34,5 @@ def main():
         url = im_feeling_lucky_url(config.google_api_key, config.google_cx, status.text)
         if url:
             reply = '.@{0} {1}'.format(config.follow_account, url)
-            print(reply)
-            #api.PostUpdate(reply, in_reply_to_status_id=status.id)
+            api.PostUpdate(reply, in_reply_to_status_id=status.id)
     return reply
