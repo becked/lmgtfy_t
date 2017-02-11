@@ -1,0 +1,11 @@
+# Google
+google_cx = 'custom_search_engine_id'
+google_api_key = 'google_api_key'
+
+# Twitter
+account = 'account_handle'
+follow_account = 'other_account_handle'
+consumer_key = 'twitter_app_key'
+consumer_secret = 'twitter_app_secret'
+access_token = 'twitter_access_token'
+access_token_secret = 'twitter_access_token_secret'

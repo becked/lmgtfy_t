@@ -1,0 +1,11 @@
+service: lmgtfy_t
+
+provider:
+  name: aws
+  runtime: python2.7
+
+functions:
+  rikerresults:
+    handler: handler.main
+    events:
+      - schedule: rate(1 hour)
