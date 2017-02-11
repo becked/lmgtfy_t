@@ -11,7 +11,9 @@ def last_reply_status_id(api):
     return last_reply_status_id
 
 def last_status(api):
-    statuses = api.GetUserTimeline(screen_name=config.follow_account, count=1, include_rts=False)
+    statuses = api.GetUserTimeline(screen_name=config.follow_account,
+                                   count=1,
+                                   include_rts=False)
     return statuses[0]
 
 def im_feeling_lucky_url(key, cx, query):
@@ -23,10 +25,10 @@ def im_feeling_lucky_url(key, cx, query):
     return url
 
 def main():
-    api = twitter.Api(consumer_key=config.consumer_key,
-                      consumer_secret=config.consumer_secret,
-                      access_token_key=config.access_token,
-                      access_token_secret=config.access_token_secret)
+    api = twitter.Api(consumer_key        = config.consumer_key,
+                      consumer_secret     = config.consumer_secret,
+                      access_token_key    = config.access_token,
+                      access_token_secret = config.access_token_secret)
 
     status = last_status(api)
     reply = None
