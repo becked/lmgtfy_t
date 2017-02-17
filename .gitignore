@@ -5,3 +5,4 @@ venv
 # Config
 config.py
 serverless.yml
+.serverless
