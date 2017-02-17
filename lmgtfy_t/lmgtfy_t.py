@@ -1,3 +1,4 @@
+import re
 import twitter
 from googleapiclient.discovery import build
 import config
@@ -22,6 +23,9 @@ def im_feeling_lucky_url(key, cx, query):
     result = service.cse().list(q=query, cx=cx).execute()
     if 'items' in result:
         url = result['items'][0]['link']
+        # Don't return a result to the tweet we're replying to
+        if re.search(config.follow_account, url):
+            return None
     return url
 
 def main():
